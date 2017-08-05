@@ -18662,13 +18662,542 @@ var _mdgriffith$style_elements$Element$Option = F3(
 		return {ctor: 'Option', _0: a, _1: b, _2: c};
 	});
 var _mdgriffith$style_elements$Element$option = _mdgriffith$style_elements$Element$Option;
+var _mdgriffith$style_elements$Style_Border$roundBottomLeft = function (x) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-bottom-left-radius',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(x),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$roundBottomRight = function (x) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-bottom-right-radius',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(x),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$roundTopRight = function (x) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-top-right-radius',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(x),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$roundTopLeft = function (x) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-top-left-radius',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(x),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$rounded = function (box) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-radius',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(box),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$dotted = A2(_mdgriffith$style_elements$Style_Internal_Model$Exact, 'border-style', 'dotted');
+var _mdgriffith$style_elements$Style_Border$dashed = A2(_mdgriffith$style_elements$Style_Internal_Model$Exact, 'border-style', 'dashed');
+var _mdgriffith$style_elements$Style_Border$solid = A2(_mdgriffith$style_elements$Style_Internal_Model$Exact, 'border-style', 'solid');
+var _mdgriffith$style_elements$Style_Border$none = A2(_mdgriffith$style_elements$Style_Internal_Model$Exact, 'border-width', '0');
+var _mdgriffith$style_elements$Style_Border$bottom = function (l) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-bottom-width',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(l),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$top = function (l) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-top-width',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(l),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$right = function (l) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-right-width',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(l),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$left = function (l) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-left-width',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(l),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Border$all = function (v) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-width',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$box(
+			{ctor: '_Tuple4', _0: v, _1: v, _2: v, _3: v}));
+};
+var _mdgriffith$style_elements$Style_Color$placeholder = function (clr) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$PseudoElement,
+		'::placeholder',
+		{
+			ctor: '::',
+			_0: _mdgriffith$style_elements$Style_Internal_Model$TextColor(clr),
+			_1: {
+				ctor: '::',
+				_0: A2(_mdgriffith$style_elements$Style_Internal_Model$Exact, 'opacity', '1'),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _mdgriffith$style_elements$Style_Color$selection = function (clr) {
+	return _mdgriffith$style_elements$Style_Internal_Model$SelectionColor(clr);
+};
+var _mdgriffith$style_elements$Style_Color$decoration = function (clr) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'text-decoration-color',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$color(clr));
+};
+var _mdgriffith$style_elements$Style_Color$cursor = function (clr) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'cursor-color',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$color(clr));
+};
+var _mdgriffith$style_elements$Style_Color$border = function (clr) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'border-color',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$color(clr));
+};
+var _mdgriffith$style_elements$Style_Color$background = function (clr) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Exact,
+		'background-color',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$color(clr));
+};
+var _mdgriffith$style_elements$Style_Color$text = _mdgriffith$style_elements$Style_Internal_Model$TextColor;
+var _mdgriffith$style_elements$Style_Font$lowercase = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-transform', 'lowercase');
+var _mdgriffith$style_elements$Style_Font$capitalize = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-transform', 'capitalize');
+var _mdgriffith$style_elements$Style_Font$uppercase = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-transform', 'uppercase');
+var _mdgriffith$style_elements$Style_Font$weight = function (fontWeight) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'font-weight',
+		_elm_lang$core$Basics$toString(fontWeight));
+};
+var _mdgriffith$style_elements$Style_Font$light = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'font-weight', '300');
+var _mdgriffith$style_elements$Style_Font$bold = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'font-weight', '700');
+var _mdgriffith$style_elements$Style_Font$italic = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'font-style', 'italic');
+var _mdgriffith$style_elements$Style_Font$strike = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-decoration', 'line-through');
+var _mdgriffith$style_elements$Style_Font$underline = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-decoration', 'underline');
+var _mdgriffith$style_elements$Style_Font$noWrap = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'white-space', 'nowrap');
+var _mdgriffith$style_elements$Style_Font$preLine = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'white-space', 'pre-line');
+var _mdgriffith$style_elements$Style_Font$preWrap = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'white-space', 'pre-wrap');
+var _mdgriffith$style_elements$Style_Font$pre = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'white-space', 'pre');
+var _mdgriffith$style_elements$Style_Font$wrap = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'white-space', 'normal');
+var _mdgriffith$style_elements$Style_Font$justifyAll = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-align', 'justifyAll');
+var _mdgriffith$style_elements$Style_Font$justify = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-align', 'justify');
+var _mdgriffith$style_elements$Style_Font$center = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-align', 'center');
+var _mdgriffith$style_elements$Style_Font$alignRight = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-align', 'right');
+var _mdgriffith$style_elements$Style_Font$alignLeft = A2(_mdgriffith$style_elements$Style_Internal_Model$Font, 'text-align', 'left');
+var _mdgriffith$style_elements$Style_Font$wordSpacing = function (offset) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'word-spacing',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(offset),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Font$letterSpacing = function (offset) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'letter-spacing',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(offset),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Font$lineHeight = function (height) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'line-height',
+		_elm_lang$core$Basics$toString(height));
+};
+var _mdgriffith$style_elements$Style_Font$size = function (size) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'font-size',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(size),
+			'px'));
+};
+var _mdgriffith$style_elements$Style_Font$typeface = function (families) {
+	return A2(
+		_mdgriffith$style_elements$Style_Internal_Model$Font,
+		'font-family',
+		_mdgriffith$style_elements$Style_Internal_Render_Value$typeface(families));
+};
+var _user$project$Main$None = {ctor: 'None'};
+var _user$project$Main$FooterLink = {ctor: 'FooterLink'};
+var _user$project$Main$FooterText = {ctor: 'FooterText'};
+var _user$project$Main$Footer = {ctor: 'Footer'};
+var _user$project$Main$DescriptionLink = {ctor: 'DescriptionLink'};
+var _user$project$Main$Description = {ctor: 'Description'};
+var _user$project$Main$Title = {ctor: 'Title'};
 var _user$project$Main$styleSheet = _mdgriffith$style_elements$Style$styleSheet(
-	{ctor: '[]'});
+	{
+		ctor: '::',
+		_0: A2(
+			_mdgriffith$style_elements$Style$style,
+			_user$project$Main$Title,
+			{
+				ctor: '::',
+				_0: _mdgriffith$style_elements$Style_Font$size(28),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_mdgriffith$style_elements$Style$style,
+				_user$project$Main$Description,
+				{
+					ctor: '::',
+					_0: _mdgriffith$style_elements$Style_Font$size(20),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_mdgriffith$style_elements$Style$style,
+					_user$project$Main$DescriptionLink,
+					{
+						ctor: '::',
+						_0: _mdgriffith$style_elements$Style_Color$text(_elm_lang$core$Color$black),
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$style_elements$Style_Font$bold,
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Style$hover(
+									{
+										ctor: '::',
+										_0: _mdgriffith$style_elements$Style_Color$text(
+											A3(_elm_lang$core$Color$rgb, 127, 209, 59)),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_mdgriffith$style_elements$Style$style,
+						_user$project$Main$Footer,
+						{
+							ctor: '::',
+							_0: _mdgriffith$style_elements$Style_Border$top(2),
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Style_Border$solid,
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Style_Color$border(
+										_elm_lang$core$Color$greyscale(0.3)),
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_mdgriffith$style_elements$Style$style,
+							_user$project$Main$FooterText,
+							{
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Style_Color$text(
+									_elm_lang$core$Color$greyscale(0.3)),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_mdgriffith$style_elements$Style$style,
+								_user$project$Main$FooterLink,
+								{
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Style_Color$text(
+										_elm_lang$core$Color$greyscale(0.3)),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$style_elements$Style_Font$bold,
+										_1: {
+											ctor: '::',
+											_0: _mdgriffith$style_elements$Style$hover(
+												{
+													ctor: '::',
+													_0: _mdgriffith$style_elements$Style_Color$text(
+														A3(_elm_lang$core$Color$rgb, 127, 209, 59)),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	});
 var _user$project$Main$view = function (model) {
 	return A2(
 		_mdgriffith$style_elements$Element$viewport,
 		_user$project$Main$styleSheet,
-		_mdgriffith$style_elements$Element$text('Behold, Elm NYC!'));
+		A3(
+			_mdgriffith$style_elements$Element$column,
+			_user$project$Main$None,
+			{
+				ctor: '::',
+				_0: _mdgriffith$style_elements$Element_Attributes$height(
+					_mdgriffith$style_elements$Element_Attributes$percent(100)),
+				_1: {
+					ctor: '::',
+					_0: A2(_mdgriffith$style_elements$Element_Attributes$paddingXY, 120, 0),
+					_1: {ctor: '[]'}
+				}
+			},
+			{
+				ctor: '::',
+				_0: A3(
+					_mdgriffith$style_elements$Element$column,
+					_user$project$Main$None,
+					{
+						ctor: '::',
+						_0: _mdgriffith$style_elements$Element_Attributes$center,
+						_1: {
+							ctor: '::',
+							_0: _mdgriffith$style_elements$Element_Attributes$verticalCenter,
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Element_Attributes$spacing(20),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Element_Attributes$height(
+										_mdgriffith$style_elements$Element_Attributes$fill(1)),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A4(
+							_mdgriffith$style_elements$Element$image,
+							'./images/logo.png',
+							_user$project$Main$None,
+							{
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Element_Attributes$width(
+									_mdgriffith$style_elements$Element_Attributes$px(200)),
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Element_Attributes$height(
+										_mdgriffith$style_elements$Element_Attributes$px(200)),
+									_1: {ctor: '[]'}
+								}
+							},
+							_mdgriffith$style_elements$Element$empty),
+						_1: {
+							ctor: '::',
+							_0: A3(
+								_mdgriffith$style_elements$Element$el,
+								_user$project$Main$Title,
+								{ctor: '[]'},
+								_mdgriffith$style_elements$Element$text('elm-nyc')),
+							_1: {
+								ctor: '::',
+								_0: A3(
+									_mdgriffith$style_elements$Element$paragraph,
+									_user$project$Main$Description,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _mdgriffith$style_elements$Element$text('welcome! join us on '),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_mdgriffith$style_elements$Element$link,
+												'http://elmnyc.herokuapp.com/',
+												A3(
+													_mdgriffith$style_elements$Element$el,
+													_user$project$Main$DescriptionLink,
+													{
+														ctor: '::',
+														_0: _mdgriffith$style_elements$Element_Attributes$target('_blank'),
+														_1: {ctor: '[]'}
+													},
+													_mdgriffith$style_elements$Element$text('slack'))),
+											_1: {
+												ctor: '::',
+												_0: _mdgriffith$style_elements$Element$text(' or at our '),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_mdgriffith$style_elements$Element$link,
+														'https://www.meetup.com/Elm-NYC/',
+														A3(
+															_mdgriffith$style_elements$Element$el,
+															_user$project$Main$DescriptionLink,
+															{
+																ctor: '::',
+																_0: _mdgriffith$style_elements$Element_Attributes$target('_blank'),
+																_1: {ctor: '[]'}
+															},
+															_mdgriffith$style_elements$Element$text('meetup group'))),
+													_1: {
+														ctor: '::',
+														_0: _mdgriffith$style_elements$Element$text('. learn more '),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_mdgriffith$style_elements$Element$link,
+																'/',
+																A3(
+																	_mdgriffith$style_elements$Element$el,
+																	_user$project$Main$DescriptionLink,
+																	{
+																		ctor: '::',
+																		_0: _mdgriffith$style_elements$Element_Attributes$target('_blank'),
+																		_1: {ctor: '[]'}
+																	},
+																	_mdgriffith$style_elements$Element$text('here'))),
+															_1: {
+																ctor: '::',
+																_0: _mdgriffith$style_elements$Element$text('!'),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A3(
+						_mdgriffith$style_elements$Element$row,
+						_user$project$Main$Footer,
+						{
+							ctor: '::',
+							_0: _mdgriffith$style_elements$Element_Attributes$verticalCenter,
+							_1: {
+								ctor: '::',
+								_0: _mdgriffith$style_elements$Element_Attributes$center,
+								_1: {
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Element_Attributes$spacing(100),
+									_1: {
+										ctor: '::',
+										_0: _mdgriffith$style_elements$Element_Attributes$height(
+											_mdgriffith$style_elements$Element_Attributes$px(75)),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{
+							ctor: '::',
+							_0: A3(
+								_mdgriffith$style_elements$Element$paragraph,
+								_user$project$Main$FooterText,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _mdgriffith$style_elements$Element$text('contact: ( '),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_mdgriffith$style_elements$Element$link,
+											'mailto:krbernet@gmail.com',
+											A3(
+												_mdgriffith$style_elements$Element$el,
+												_user$project$Main$FooterLink,
+												{ctor: '[]'},
+												_mdgriffith$style_elements$Element$text('kara'))),
+										_1: {
+											ctor: '::',
+											_0: _mdgriffith$style_elements$Element$text(', '),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_mdgriffith$style_elements$Element$link,
+													'mailto:noahzacharygordon@gmail.com',
+													A3(
+														_mdgriffith$style_elements$Element$el,
+														_user$project$Main$FooterLink,
+														{ctor: '[]'},
+														_mdgriffith$style_elements$Element$text('noah'))),
+												_1: {
+													ctor: '::',
+													_0: _mdgriffith$style_elements$Element$text(' )'),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A3(
+									_mdgriffith$style_elements$Element$paragraph,
+									_user$project$Main$FooterText,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: A2(
+											_mdgriffith$style_elements$Element$link,
+											'/',
+											A3(
+												_mdgriffith$style_elements$Element$el,
+												_user$project$Main$FooterLink,
+												{ctor: '[]'},
+												_mdgriffith$style_elements$Element$text('code of conduct'))),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}));
 };
 var _user$project$Main$main = _elm_lang$html$Html$program(
 	{
