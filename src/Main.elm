@@ -60,26 +60,35 @@ view model =
             ]
 
 
+fontStyles =
+    [ Font.typeface [ "Montserrat", "sans-serif" ] ]
+
+
 styleSheet =
     Style.styleSheet
-        [ style Title
+        [ style Title <|
             [ Font.size 28 ]
-        , style Description
+                ++ fontStyles
+        , style Description <|
             [ Font.size 20 ]
-        , style DescriptionLink
+                ++ fontStyles
+        , style DescriptionLink <|
             [ Color.text black
             , Font.bold
             , Style.hover
                 [ Color.text (rgb 127 209 59) ]
             ]
+                ++ fontStyles
         , style Footer
             [ Border.top 2, Border.solid, Color.border (greyscale 0.3) ]
-        , style FooterText
+        , style FooterText <|
             [ Color.text (greyscale 0.3) ]
-        , style FooterLink
+                ++ fontStyles
+        , style FooterLink <|
             [ Color.text (greyscale 0.3)
             , Font.bold
             , Style.hover
                 [ Color.text (rgb 127 209 59) ]
             ]
+                ++ fontStyles
         ]
