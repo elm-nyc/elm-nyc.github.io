@@ -19171,27 +19171,8 @@ var _user$project$Main$view = function (model) {
 															_mdgriffith$style_elements$Element$text('meetup group'))),
 													_1: {
 														ctor: '::',
-														_0: _mdgriffith$style_elements$Element$text('. learn more '),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_mdgriffith$style_elements$Element$link,
-																'/',
-																A3(
-																	_mdgriffith$style_elements$Element$el,
-																	_user$project$Main$DescriptionLink,
-																	{
-																		ctor: '::',
-																		_0: _mdgriffith$style_elements$Element_Attributes$target('_blank'),
-																		_1: {ctor: '[]'}
-																	},
-																	_mdgriffith$style_elements$Element$text('here'))),
-															_1: {
-																ctor: '::',
-																_0: _mdgriffith$style_elements$Element$text('!'),
-																_1: {ctor: '[]'}
-															}
-														}
+														_0: _mdgriffith$style_elements$Element$text('.'),
+														_1: {ctor: '[]'}
 													}
 												}
 											}
@@ -19275,7 +19256,7 @@ var _user$project$Main$view = function (model) {
 										ctor: '::',
 										_0: A2(
 											_mdgriffith$style_elements$Element$link,
-											'/',
+											'https://docs.google.com/document/d/1zB9eTN-FMh3gYFSxXyV0hlFWg2uhr6JsfnOboVUMkUw/edit',
 											A3(
 												_mdgriffith$style_elements$Element$el,
 												_user$project$Main$FooterLink,

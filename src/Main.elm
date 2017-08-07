@@ -41,9 +41,7 @@ view model =
                     , text "slack" |> el DescriptionLink [ target "_blank" ] |> link "http://elmnyc.herokuapp.com/"
                     , text " or at our "
                     , text "meetup group" |> el DescriptionLink [ target "_blank" ] |> link "https://www.meetup.com/Elm-NYC/"
-                    , text ". learn more "
-                    , text "here" |> el DescriptionLink [ target "_blank" ] |> link "/"
-                    , text "!"
+                    , text "."
                     ]
                 ]
             , row Footer [ verticalCenter, center, spacing 100, height (px 75) ] <|
@@ -55,7 +53,7 @@ view model =
                     , text " )"
                     ]
                 , paragraph FooterText [] <|
-                    [ text "code of conduct" |> el FooterLink [] |> link "/" ]
+                    [ text "code of conduct" |> el FooterLink [] |> link "https://docs.google.com/document/d/1zB9eTN-FMh3gYFSxXyV0hlFWg2uhr6JsfnOboVUMkUw/edit" ]
                 ]
             ]
 
