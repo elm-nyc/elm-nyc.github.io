@@ -19260,7 +19260,11 @@ var _user$project$Main$view = function (model) {
 											A3(
 												_mdgriffith$style_elements$Element$el,
 												_user$project$Main$FooterLink,
-												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: _mdgriffith$style_elements$Element_Attributes$target('_blank'),
+													_1: {ctor: '[]'}
+												},
 												_mdgriffith$style_elements$Element$text('code of conduct'))),
 										_1: {ctor: '[]'}
 									}),

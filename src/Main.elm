@@ -53,7 +53,7 @@ view model =
                     , text " )"
                     ]
                 , paragraph FooterText [] <|
-                    [ text "code of conduct" |> el FooterLink [] |> link "https://docs.google.com/document/d/1zB9eTN-FMh3gYFSxXyV0hlFWg2uhr6JsfnOboVUMkUw/edit" ]
+                    [ text "code of conduct" |> el FooterLink [ target "_blank" ] |> link "https://docs.google.com/document/d/1zB9eTN-FMh3gYFSxXyV0hlFWg2uhr6JsfnOboVUMkUw/edit" ]
                 ]
             ]
 
