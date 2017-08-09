@@ -1,6 +1,8 @@
 module Main exposing (main)
 
 import Html
+import Http
+import Json.Decode as Json
 import Color exposing (..)
 import Platform.Sub as Sub
 import Element exposing (..)
@@ -13,11 +15,57 @@ import Style.Color as Color
 
 main =
     Html.program
-        { init = ( (), Cmd.none )
-        , update = \_ _ -> ( (), Cmd.none )
-        , subscriptions = \_ -> Sub.none
+        { init = ( { nextMeetup = Nothing }, fetchMeetup )
+        , update = update
         , view = view
+        , subscriptions = \_ -> Sub.none
         }
+
+
+type alias Model =
+    { nextMeetup : Maybe Meetup }
+
+
+type alias Meetup =
+    { name : String
+    , link : String
+    , time : Int
+    }
+
+
+fetchMeetup : Cmd Message
+fetchMeetup =
+    Http.get "http://api.meetup.com/Elm-NYC/events" meetupDecoder
+        |> Http.send UpdateMeetup
+
+
+meetupDecoder : Json.Decoder Meetup
+meetupDecoder =
+    Json.map3 Meetup
+        (Json.field "name" Json.string)
+        (Json.field "link" Json.string)
+        (Json.field "time" Json.int)
+        |> Json.index 0
+
+
+type Message
+    = UpdateMeetup (Result Http.Error Meetup)
+
+
+update : Message -> Model -> ( Model, Cmd Message )
+update message model =
+    case message of
+        UpdateMeetup result ->
+            case result of
+                Ok meetup ->
+                    ( { model | nextMeetup = Just meetup }, Cmd.none )
+
+                Err _ ->
+                    ( { model | nextMeetup = Nothing }, Cmd.none )
+
+
+
+-- view
 
 
 type Styles
@@ -43,6 +91,7 @@ view model =
                     , text "meetup group" |> el DescriptionLink [ target "_blank" ] |> link "https://www.meetup.com/Elm-NYC/"
                     , text "."
                     ]
+                , meetupView model
                 ]
             , row Footer [ verticalCenter, center, spacing 100, height (px 75) ] <|
                 [ paragraph FooterText [] <|
@@ -56,6 +105,20 @@ view model =
                     [ text "code of conduct" |> el FooterLink [ target "_blank" ] |> link "https://docs.google.com/document/d/1zB9eTN-FMh3gYFSxXyV0hlFWg2uhr6JsfnOboVUMkUw/edit" ]
                 ]
             ]
+
+
+meetupView : Model -> Element Styles variation Message
+meetupView model =
+    case model.nextMeetup of
+        Just meetup ->
+            paragraph Description [] <|
+                [ text "Sign up for our next meetup: "
+                , text meetup.name |> el DescriptionLink [ target "_blank" ] |> link meetup.link
+                ]
+
+        Nothing ->
+            paragraph Description [] <|
+                [ text "No upcoming meetups have been scheduled yet. Stay tuned!" ]
 
 
 fontStyles =
