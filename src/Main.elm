@@ -47,7 +47,7 @@ view model =
             , row Footer [ verticalCenter, center, spacing 100, height (px 75) ] <|
                 [ paragraph FooterText [] <|
                     [ text "contact: ( "
-                    , text "kara" |> el FooterLink [] |> link "mailto:krbernet@gmail.com"
+                    , text "kara" |> el FooterLink [] |> link "mailto:krbernert@gmail.com"
                     , text ", "
                     , text "noah" |> el FooterLink [] |> link "mailto:noahzacharygordon@gmail.com"
                     , text " )"
